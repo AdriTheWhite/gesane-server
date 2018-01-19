@@ -59,8 +59,8 @@ public class DependenciaProfesorSpecificDaoImplementation extends TableGenericDa
         idUsuario = oUsuario.getId();
         idCentrosanitario = oUsuario.getId_centrosanitario();
 
-        strSQL = "SELECT * FROM dependencia d, tipodependencia td WHERE d.id_tipodependencia = td.id AND d.id_centrosanitario = " + idCentrosanitario;
-
+        strSQL = "SELECT * FROM dependencia d, tipodependencia td WHERE d.id_tipodependencia = td.id AND d.id_centrosanitario = " + idCentrosanitario + " ";
+        strCountSQL = "SELECT COUNT(*) FROM dependencia d, tipodependencia td WHERE d.id_tipodependencia = td.id AND d.id_centrosanitario = " + idCentrosanitario + " ";
     }
 
     @Override
@@ -153,4 +153,7 @@ public class DependenciaProfesorSpecificDaoImplementation extends TableGenericDa
         }
         return idResult;
     }
+    
+    
+    
 }

@@ -60,7 +60,7 @@ public class DependenciaSpecificBeanImplementation extends TableGenericBeanImple
             Description = "Código de la dependencia",
             Type = EnumHelper.FieldType.String,
             IsRequired = true,
-            RegexPattern = "[^a-z0-9-]",
+            RegexPattern = "[A-Z0-9]+",
             RegexHelp = "letras mayúsculas y números",
             IsForeignKeyDescriptor = true,
             MaxLength = 50
